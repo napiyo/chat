@@ -28,3 +28,23 @@
 .leftMessage {
     background-color: blueviolet;
 }
+
+
+/* for info - design */
+
+.infoBody {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 8px; */
+}
+
+.infoContent {
+    width: fit-content;
+    max-width: 60%;
+    padding: 5px 15px;
+    word-wrap: break-word;
+    background-color: rgba(162, 170, 53, 0.411);
+    border-radius: 5px;
+}

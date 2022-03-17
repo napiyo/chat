@@ -4,11 +4,7 @@ import Join from './components/Join';
 import Chat from './components/Chat';
 import Error404 from './components/Error404';
 
-// window.onbeforeunload=(e)=>{
-//   e.preventDefault(); 
-//   e.returnValue = '';
-  
-// }
+
 function App() {
   return (
     <Router>

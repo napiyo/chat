@@ -21,10 +21,10 @@ export default function Chat() {
     
     }
 
-    socket = io('/');
+    socket = io('http://localhost:4000');
     socket.on("connect",()=>{
       myId=socket.id;
-
+      socket.emit("joined",{type:"info",info:`${userName} joined chat`,userName});
       
     })
    
@@ -33,12 +33,24 @@ export default function Chat() {
     
     return ()=>{
       socket.on("disconnect")
+      // socket.emit("left",{type:"info",info:{userName}});
+
       socket.off()
     }
  },[])
 
  useEffect(() => {
   socket.on("recieveMsg",(data)=>{
+    // console.log(data.msg);
+    setallMessages([...allMessages,data])
+   
+  })
+  socket.on("joined",(data)=>{
+    // console.log(data.msg);
+    setallMessages([...allMessages,data])
+   
+  })
+  socket.on("left",(data)=>{
     // console.log(data.msg);
     setallMessages([...allMessages,data])
    
@@ -62,16 +74,15 @@ export default function Chat() {
         {
           (allMessages.length===0)?"Say hi..no older messages were found":allMessages
           .map((item,index)=>{
-            console.log(index);
          return <Message item={item} id={index}/>})
         }
     
       </div>
       <div className="chatInpts">
         <input type="text" className='messageInpt' value={msg} onChange={(e)=>setmsg(e.target.value)}/>
-        <button id="sendBtn" >
+        <button id="sendBtn" onClick={sendmsg}>
 
-          <img src={sendLogo} alt="send"  className='sendLogoImg' onClick={sendmsg}/>
+          <img src={sendLogo} alt="send"  className='sendLogoImg' />
  
         </button>
       </div>

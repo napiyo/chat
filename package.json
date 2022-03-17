@@ -9,7 +9,7 @@
     "scripts": {
         "dev": "nodemon run server.js",
         "start": "node run server.js",
-        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontEnd && npm run build --prefix frontEnd && npm install"
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend && npm install"
     },
     "author": "",
     "license": "ISC",

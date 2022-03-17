@@ -21,7 +21,7 @@ export default function Chat() {
     
     }
 
-    socket = io('http://localhost:4000');
+    socket = io('/');
     socket.on("connect",()=>{
       myId=socket.id;
       socket.emit("joined",{type:"info",info:`${userName} joined chat`,userName});

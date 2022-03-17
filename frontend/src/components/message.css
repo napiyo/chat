@@ -1,0 +1,30 @@
+.messageBody {
+    display: flex;
+    column-gap: 1vmin;
+    max-width: 100%;
+    box-sizing: border-box;
+    /* margin: 1vmax 0; */
+}
+
+.message {
+    /* flex: 1; */
+    max-width: 60%;
+    align-items: flex-start;
+    /* text-overflow: ellipsis; */
+    height: auto;
+    padding: 8px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    background-color: rgb(80, 33, 211);
+    border-radius: 3px;
+}
+
+.messageAvtar {
+    max-width: 18%;
+    padding-top: 0.5vmax;
+    word-wrap: break-word;
+}
+
+.leftMessage {
+    background-color: blueviolet;
+}

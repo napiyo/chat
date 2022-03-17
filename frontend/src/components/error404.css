@@ -1,0 +1,11 @@
+.error404Body {
+    font-size: 3rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #121212;
+    color: white;
+}

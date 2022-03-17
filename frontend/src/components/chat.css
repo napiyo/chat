@@ -1,0 +1,62 @@
+.chatBody {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #121212ce;
+    color: white;
+}
+
+.chatHeader {
+    background-color: cyan;
+    padding: 1vmax;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    height: 5%;
+}
+
+.inbox {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vmax;
+    padding: 1vmax;
+    box-sizing: border-box;
+}
+
+.chatInpts {
+    display: flex;
+    /* height: 5%; */
+    /* height: 5%; */
+    padding: 1vmax;
+}
+
+.messageInpt {
+    flex: 1;
+    font-size: 1.2rem;
+}
+
+#sendBtn {
+    padding: 10px;
+    background-color: rgb(14, 230, 230);
+    margin: 0 1vmin;
+    outline: none;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+}
+
+.sendLogoImg {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s;
+}
+
+#sendBtn:hover .sendLogoImg {
+    transform: translateX(6px) rotateZ(45deg);
+}
+
+#sendBtn:hover {
+    background-color: aqua;
+}
